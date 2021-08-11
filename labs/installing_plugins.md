@@ -1,4 +1,5 @@
-Installing GIT plugin
+Installing GIT plugin:
+----------------------------
 Got to Jenkins dashboard hhtp://http://3.15.199.147:8080/
 Select Manage Jenkins
 Select Manage Plugins
