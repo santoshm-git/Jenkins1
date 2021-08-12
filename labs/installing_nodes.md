@@ -12,3 +12,6 @@
 6. Add Usage as Only build jobs with labels expression matching this node
 7. Add Launch Method as Launch agent by connecting it to the master
 8. Keep other options as Deafult. Click Save
+
+### Once Completed one offline node is available under 'Build Executer Status'
+
