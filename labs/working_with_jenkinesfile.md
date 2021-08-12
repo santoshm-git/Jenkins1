@@ -91,3 +91,16 @@ pipeline {
 ###Sample stage view
 ![Declarative_stageview](https://user-images.githubusercontent.com/64212984/129164869-677f29c6-e855-4356-9c95-d253f752e789.PNG)
 
+### Using pipeline syntex
+1. Go to the pipeline build 'http://18.237.87.185:8080/job/firstPipeline/'
+2. Select 'Pipeline Syntex', Select 'Snippet Generator' 
+3. Under 'Sample Step' select 'git: Git'
+4. Add ''Repository URL' as https://github.com/kul-samples/java_sample_webapp.git, branch as main, Credentials as Github credentials.
+5. Click on 'Generate Pipeline Script' to prepare pipeline  step
+6. Copy the synxtax and add the same in Jenkinsfile using below code:
+
+stage ('Checkout Java Code'){
+  steps{
+    git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
+  }
+}
