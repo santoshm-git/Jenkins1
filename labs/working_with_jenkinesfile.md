@@ -17,3 +17,24 @@ pipeline {
         }
     }
 }
+
+### Adding more stages to the pipeline
+1. Configure your build
+2. Go to pipeline & update pipeline code with below code:
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('how are you') {
+            steps {
+                echo 'how are you'
+            }
+        }
+    }
+}
