@@ -3,7 +3,7 @@
 2. Select Configure Global Security
 3. Under Agents, select Fixed and add 50000. Click Save
 
-###
+### Install agant using 'Launch agent by connecting it to the master'
 1. Go to Jenkins dashboard http://18.237.87.185:8080/
 2. click 'Build Executer Status''
 3. Select New Node
@@ -14,4 +14,8 @@
 8. Keep other options as Deafult. Click Save
 
 ### Once Completed one offline node is available under 'Build Executer Status'
-
+1. select 'Windows Nodes' which is showing offline
+2. Ensure Java is installed on the node
+3. Access 'http://18.237.87.185:8080/jnlpJars/agent.jar' to download 'agent.jar' and place it in agent remote directory which is 'C:\Windows\'
+4. Open CMD & Run cd c:\Jenkins
+5. Copy command under Run from agent command line: and Runthe same from CMD
