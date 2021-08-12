@@ -78,3 +78,16 @@ pipeline {
     }
 }
 ![image](https://user-images.githubusercontent.com/64212984/129163258-3528ca87-2dee-447a-857f-861280c6b86f.png)
+
+
+### Take pipeline from SCM (GITHUB)
+1. Edit the build and select Definations as 'Pipeline Script from SCM' under pipeline
+2. Under SCM select Git
+3. Under Repository URL add Github repo where Jenkinsfile is avaiable, https://github.com/santoshm-git/Jenkins1.git
+4. Under Credentials select Github-creds
+5. Under Branches to build add */main
+6. Under Script Path add the name of pipeline script, like Jenkinsfile
+
+###Sample stage view
+![Declarative_stageview](https://user-images.githubusercontent.com/64212984/129164869-677f29c6-e855-4356-9c95-d253f752e789.PNG)
+
