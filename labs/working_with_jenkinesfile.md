@@ -98,14 +98,20 @@ pipeline {
 4. Add ''Repository URL' as https://github.com/kul-samples/java_sample_webapp.git, branch as main, Credentials as Github credentials.
 5. Click on 'Generate Pipeline Script' to prepare pipeline  step
 6. Copy the synxtax and add the same in Jenkinsfile using below code:
-stage ('Checkout AWS'){
+
+pipeline {
+    agent any
+
+    stages {
+      stage ('Checkout AWS'){
             steps{
                 git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/santoshm-git/aws-labs.git'
             }
         }  
-
-stage ('Checkout Java Code'){
-   steps{
-      git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
-     }
- }
+       stage ('Checkout Java Code'){
+            steps{
+                git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
+            }
+        }
+        .....
+        .....
