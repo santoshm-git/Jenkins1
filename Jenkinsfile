@@ -2,7 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ('Checkout Java Code'){
+      stage ('Checkout AWS'){
+            steps{
+                git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/santoshm-git/aws-labs.git'
+            }
+        }  
+       stage ('Checkout Java Code'){
             steps{
                 git branch: 'main', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
             }
