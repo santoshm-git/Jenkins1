@@ -185,8 +185,26 @@ stage('Check Docker Version') {
 stage('create docker image') {
   steps {
     sh '''docker image ls 
-      docker image build .  -f Dockerfile -t devops:latest
+      docker image build .  -f Dockerfile -t msantoshdocker/devops:latest
       docker image ls'''
+  }
+}
+```
+### Adding parameter in build for docker login, create an account on Docker HUB [https://hub.docker.com/] if docker account doesn't exist
+```
+1. Go to Jenkins buld http://18.237.87.185:8080/job/firstPipeline/
+2. Click Configure & Enable This project is parameterized
+3. Select string paramater from Add paramter drop down
+4. Add Name as dockeruser & deafult value as docker user
+5. Select Password parameter from Add paramter drop down
+6. Add Name as dockerpassword & deafult value as docker password
+```
+### Refer parameters in Jenkinsfile to login to docker hub
+```
+stage('push docker image') {
+  steps {
+    sh '''docker login -u ${dockeruser} -p ${dockerpassword}
+    docker push msantoshdocker/devops:latest'''
   }
 }
 ```
