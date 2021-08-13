@@ -115,3 +115,9 @@ pipeline {
         }
         .....
         .....
+
+### Run build on specfic agent using labels under agent tag
+'''
+agent{
+    label 'linux'
+}
