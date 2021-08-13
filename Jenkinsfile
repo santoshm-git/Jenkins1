@@ -4,8 +4,7 @@ pipeline {
     }
     tools {
       maven 'mvn_3.8.1'
-      dockerTool 'docker'
-    }
+      }
     stages {
         stage ('Checkout Java Code'){
             steps{
