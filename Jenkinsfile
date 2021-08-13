@@ -21,14 +21,14 @@ pipeline {
             }
           }
         }
-        stage('Check Docker image') {
+        stage('Create Docker Image') {
             steps {
                 sh '''docker image ls 
                     docker image build .  -f Dockerfile -t msantoshdocker/devops:latest
                     docker image ls'''
             }
         }
-        stage('Push  Docker image') {
+        stage('Push Docker Image') {
             steps {
                 sh '''docker login -u ${dockeruser} -p ${dockerpassword}
                   docker push msantoshdocker/devops:latest'''
