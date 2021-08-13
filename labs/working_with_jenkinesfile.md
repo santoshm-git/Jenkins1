@@ -180,3 +180,13 @@ stage('Check Docker Version') {
   }
 }
 ```
+### added stage to create docker image
+```
+stage('create docker image') {
+  steps {
+    sh '''docker image ls 
+      docker image build .  -f Dockerfile -t devops:latest
+      docker image ls'''
+  }
+}
+```

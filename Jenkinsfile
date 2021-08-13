@@ -23,7 +23,9 @@ pipeline {
         }
         stage('Check Docker Version') {
             steps {
-                sh 'docker version'
+                sh '''docker image ls 
+                    docker image build .  -f Dockerfile -t kulbhushanmayer/devops:latest
+                    docker image ls'''
             }
         }
         stage ('SAST'){
