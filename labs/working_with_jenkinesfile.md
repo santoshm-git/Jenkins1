@@ -161,10 +161,12 @@ https://github.com/santoshm-git/Jenkins1/blob/main/labs/Jenkinsfile_with_mavin.P
           }
     }
 ```
-### Installing tool for maven build
-1. Go to Jenkins dashboard
-2. Select 'Manage Jenkins'
-3. Select 'Global Tool Configuration'
-4. Under `Mavin` Click `Add Mavin`
-5. Add `Name` as `mvn_3.8.1`
-6. Select `Install automatically` and Select `3.8.1` in `Version`. Click Save
+### Installing docker on jenkins
+```
+1. Go to Jenkins Dashboard
+2. Select Manage Jenkins
+3. Select Global Tool Configuration
+4. Under Docker click on Add Docker
+5. Add Name as Docker & Select Install automatically & Add Docker Version as 20.10.8-ce.
+6. Click Save
+```
