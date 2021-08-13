@@ -148,3 +148,8 @@ stage('Build Package') {
 }
 ```
 https://github.com/santoshm-git/Jenkins1/blob/main/labs/Jenkinsfile_with_mavin.PNG
+
+### Archine artifacts from one stage
+```
+
+```
