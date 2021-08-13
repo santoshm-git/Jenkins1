@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent{
+        label 'demo'
+    }
 
     stages {
       stage ('Checkout AWS'){
