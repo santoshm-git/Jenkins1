@@ -133,3 +133,18 @@ pipeline {
 6. Select `Install automatically` and Select `3.8.1` in `Version`. Click Save
 7. 
 ```
+### Update Jenkinsfile to use Installed maven version during the build, Desclarative tools setup
+```
+tools {
+  maven 'mvn_3.8.1'
+}
+```
+### New stage to run maven process
+```
+stage('Build Package') {
+    steps {
+        sh 'mvn clean package'
+    }
+}
+```
+https://github.com/santoshm-git/Jenkins1/blob/main/labs/Jenkinsfile_with_mavin.PNG
