@@ -4,6 +4,7 @@ pipeline {
     }
     tools {
       maven 'mvn_3.8.1'
+      docker 'docker'
     }
     stages {
         stage ('Checkout Java Code'){
@@ -21,9 +22,9 @@ pipeline {
             }
           }
         }
-        stage('How are you?') {
+        stage('Check Docker Version') {
             steps {
-                echo 'How are you?'
+                sh 'docker version'
             }
         }
         stage ('SAST'){

@@ -131,7 +131,6 @@ pipeline {
 4. Under `Mavin` Click `Add Mavin`
 5. Add `Name` as `mvn_3.8.1`
 6. Select `Install automatically` and Select `3.8.1` in `Version`. Click Save
-7. 
 ```
 ### Update Jenkinsfile to use Installed maven version during the build, Desclarative tools setup
 ```
@@ -151,5 +150,21 @@ https://github.com/santoshm-git/Jenkins1/blob/main/labs/Jenkinsfile_with_mavin.P
 
 ### Archine artifacts from one stage
 ```
-
+ stage('Build Package') {
+            steps {
+                sh 'mvn clean package'
+            }
+            post {
+              always {
+                archive 'target/devops.war'
+            }
+          }
+    }
 ```
+### Installing tool for maven build
+1. Go to Jenkins dashboard
+2. Select 'Manage Jenkins'
+3. Select 'Global Tool Configuration'
+4. Under `Mavin` Click `Add Mavin`
+5. Add `Name` as `mvn_3.8.1`
+6. Select `Install automatically` and Select `3.8.1` in `Version`. Click Save
