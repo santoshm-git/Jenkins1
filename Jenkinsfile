@@ -9,11 +9,6 @@ pipeline {
                 git branch: 'master', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/santoshm-git/aws-labs.git'
             }
         }  
-       stage ('Checkout Java Code'){
-            steps{
-                git branch: 'master', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
-            }
-        }
         stage('Hello') {
             steps {
                 echo 'Hello World'
