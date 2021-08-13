@@ -122,3 +122,14 @@ pipeline {
         label 'linux'
     }
 ```
+
+```
+### Installing tool for maven build
+1. Go to Jenkins dashboard
+2. Select 'Manage Jenkins'
+3. Select 'Global Tool Configuration'
+4. Under `Mavin` Click `Add Mavin`
+5. Add `Name` as `mvn_3.8.1`
+6. Select `Install automatically` and Select `3.8.1` in `Version`. Click Save
+7. 
+```

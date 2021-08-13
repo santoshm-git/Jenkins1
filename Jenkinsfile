@@ -2,16 +2,18 @@ pipeline {
     agent{
         label 'linux'
     }
-
+    tools {
+      maven 'mvn_3.8.1'
+    }
     stages {
-      stage ('Checkout AWS'){
+        stage ('Checkout Java Code'){
             steps{
-                git branch: 'master', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/santoshm-git/aws-labs.git'
+                git branch: 'master', credentialsId: 'GITHUB-CREDS', url: 'https://github.com/kul-samples/java_sample_webapp.git'
             }
         }  
-        stage('Hello') {
+        stage('Build Package') {
             steps {
-                echo 'Hello World'
+                sh 'mvn clean package'
             }
         }
         stage('How are you?') {
