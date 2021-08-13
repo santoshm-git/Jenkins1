@@ -21,7 +21,14 @@ pipeline {
             }
           }
         }
-        stage('Check Docker Version') {
+        stage('Check Docker image') {
+            steps {
+                sh '''docker image ls 
+                    docker image build .  -f Dockerfile -t msantoshdocker/devops:latest
+                    docker image ls'''
+            }
+        }
+        stage('Push  Docker image') {
             steps {
                 sh '''docker image ls 
                     docker image build .  -f Dockerfile -t msantoshdocker/devops:latest
