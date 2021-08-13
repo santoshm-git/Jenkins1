@@ -161,12 +161,14 @@ https://github.com/santoshm-git/Jenkins1/blob/main/labs/Jenkinsfile_with_mavin.P
           }
     }
 ```
-### Installing docker on jenkins
+### Installing docker on Jenkins Node
 ```
-1. Go to Jenkins Dashboard
-2. Select Manage Jenkins
-3. Select Global Tool Configuration
-4. Under Docker click on Add Docker
-5. Add Name as Docker & Select Install automatically & Add Docker Version as 20.10.8-ce.
-6. Click Save
+$ sudo apt-get update -y
+$ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+$ sudo apt-get update -y
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+$ sudo chown ubuntu:users /var/run/docker.sock
+$ docker version
 ```
