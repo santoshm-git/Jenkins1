@@ -172,3 +172,11 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 $ sudo chown ubuntu:users /var/run/docker.sock
 $ docker version
 ```
+### added stage to check docker version
+```
+stage('Check Docker Version') {
+  steps {
+    sh 'docker version'
+  }
+}
+```
