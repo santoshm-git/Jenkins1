@@ -30,8 +30,8 @@ pipeline {
         }
         stage('Push Docker Image') {
             steps {
-                sh '''docker login -u ${dockeruser} -p ${dockerpassword}
-                  docker push msantoshdocker/devops:latest'''
+                sh 'docker push msantoshdocker/devops:latest'
+                  
             }
         }
         stage ('SAST'){
